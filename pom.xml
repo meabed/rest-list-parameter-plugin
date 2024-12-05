@@ -5,18 +5,17 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>4.47</version>
+    <version>5.3</version>
     <relativePath />
   </parent>
 
   <properties>
-    <revision>1.6.4</revision>
-    <changelist>-SNAPSHOT</changelist>
+    <changelist>999999-SNAPSHOT</changelist>
     <!-- Baseline Jenkins version you use to build the plugin. Users must have this version or newer to run. -->
-    <jenkins.version>2.332.1</jenkins.version>
-    <bom.artifactId>2.332.x</bom.artifactId>
-    <bom.version>1595.v8c71c13cc3a_9</bom.version>
-    <java.level>8</java.level>
+    <jenkins.version>2.479.1</jenkins.version>
+    <bom.artifactId>2.479.x</bom.artifactId>
+    <bom.version>3761.vd922730f0fd2</bom.version>
+
     <!--
     Other properties you may want to use:
       ~ jenkins-test-harness.version: Jenkins Test Harness version you use to test the plugin. For Jenkins version >= 1.580.1 use JTH 2.0 or higher.
@@ -29,8 +28,8 @@
   <groupId>io.jenkins.plugins</groupId>
   <artifactId>rest-list-parameter</artifactId>
   <inceptionYear>2020</inceptionYear>
-  <url>https://github.com/jenkinsci/${project.artifactId}-plugin/blob/${project.artifactId}-${revision}/README.adoc</url>
-  <version>${revision}${changelist}</version>
+  <!--url>https://github.com/jenkinsci/${project.artifactId}-plugin/blob/${project.artifactId}-${revision}/README.adoc</url-->
+  <version>${changelist}</version>
   <packaging>hpi</packaging>
 
   <licenses>
@@ -45,6 +44,11 @@
       <id>h1dden_da3m0n</id>
       <name>h1dden-da3m0n</name>
       <url>https://github.com/h1dden-da3m0n</url>
+    </developer>
+    <developer>
+      <id>mymarche</id>
+      <name>Mikhail Marchenko</name>
+      <url>https://github.com/mymarche</url>
     </developer>
   </developers>
 
@@ -91,30 +95,37 @@
     </dependency>
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
-      <artifactId>okhttp-api</artifactId>
-      <version>3.14.9</version>
+      <artifactId>commons-text-api</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.jayway.jsonpath</groupId>
-      <artifactId>json-path</artifactId>
-      <version>2.7.0</version>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>commons-lang3-api</artifactId>
     </dependency>
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>jquery3-api</artifactId>
-      <version>3.6.0-4</version>
+    </dependency>
+    <dependency>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>okhttp-api</artifactId>
+      <version>4.11.0-181.v1de5b_83857df</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jayway.jsonpath</groupId>
+      <artifactId>json-path</artifactId>
+      <version>2.9.0</version>
     </dependency>
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>select2-api</artifactId>
-      <version>4.0.13-7</version>
+      <version>4.0.13-8</version>
     </dependency>
 
     <!-- Optional Dependencies -->
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>antisamy-markup-formatter</artifactId>
-      <version>2.7</version>
+      <version>162.v0e6ec0fcfcf6</version>
       <optional>true</optional>
     </dependency>
 
